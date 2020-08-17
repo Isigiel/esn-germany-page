@@ -15,7 +15,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/esn-germany",
             "index": "src/index.html",
@@ -30,7 +30,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "extraWebpackConfig": "./webpack.config.js"
           },
           "configurations": {
             "production": {
@@ -64,9 +65,10 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
-            "browserTarget": "esn-germany:build"
+            "browserTarget": "esn-germany:build",
+            "extraWebpackConfig": "./webpack.config.js"
           },
           "configurations": {
             "production": {
@@ -123,6 +125,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "esn-germany"
+    }
+  },
+  "defaultProject": "esn-germany",
+  "cli": {
+    "analytics": "301c0ec9-0954-4a7c-94fc-e412ff77325b"
+  }
 }
