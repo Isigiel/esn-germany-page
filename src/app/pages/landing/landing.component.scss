@@ -1,0 +1,6 @@
+.header-image {
+  height: 60vh;
+  width: 100%;
+  transition: background-image 2s ease-in-out;
+  will-change: background-image;
+}

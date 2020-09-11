@@ -1,0 +1,35 @@
+<div
+  class="bg-cover bg-center header-image p-8 relative"
+  [style.background-image]="currentUrl$ | async"
+>
+  <app-navigation></app-navigation>
+  <div class="absolute bottom-8 left-8 right-8">
+    <div class="max-w-screen-xl mx-auto">
+      <p class="text-4xl text-white">
+        {{ currentText$ | async }}
+      </p>
+    </div>
+  </div>
+</div>
+<div class="bg-gray-800 p-8">
+  <div class="flex justify-between text-white mx-auto max-w-screen-xl">
+    <div class="text-center">
+      <p class="text-4xl">42</p>
+      <p class="text-lg">Countries</p>
+    </div>
+    <div class="text-center">
+      <p class="text-4xl">39</p>
+      <p class="text-lg">German sections</p>
+    </div>
+    <div class="text-center">
+      <p class="text-4xl">15 000</p>
+      <p class="text-lg">European volunteers</p>
+    </div>
+    <div class="text-center">
+      <p class="text-4xl">10 600</p>
+      <p class="text-lg">Exchange students</p>
+    </div>
+  </div>
+</div>
+<p class="text-4xl">Calendar</p>
+<app-calendar [events]="events"></app-calendar>
