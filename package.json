@@ -10,7 +10,10 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "scully:serve": "scully serve"
+    "scully:serve": "scully serve",
+    "scully:scan": "scully --scanRoutes",
+    "prestatic": "yarn run build:prod",
+    "static": "scully"
   },
   "private": true,
   "dependencies": {
