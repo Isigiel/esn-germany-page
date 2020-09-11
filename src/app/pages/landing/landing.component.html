@@ -4,10 +4,14 @@
 >
   <app-navigation></app-navigation>
   <div class="absolute bottom-8 left-8 right-8">
-    <div class="max-w-screen-xl mx-auto">
-      <p class="text-4xl text-white">
+    <div class="max-w-screen-xl mx-auto flex flex-col items-start space-y-4">
+      <p class="text-4xl text-black font-medium bg-white px-2">
         {{ currentText$ | async }}
       </p>
+      <markdown
+        [data]="currentInfo$ | async"
+        class="prose text-black bg-white px-2"
+      ></markdown>
     </div>
   </div>
 </div>

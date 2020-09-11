@@ -14,6 +14,7 @@ export class LandingComponent {
   private pictures: any[];
   public currentUrl$: Observable<string>;
   public currentText$: Observable<string>;
+  public currentInfo$: Observable<string>;
   constructor(private route: ActivatedRoute) {
     this.events = this.route.snapshot.data.events;
     this.pictures = this.route.snapshot.data.pictures;
@@ -29,6 +30,12 @@ export class LandingComponent {
     );
     this.currentText$ = pictureChange.pipe(
       map((time) => this.pictures[time % this.pictures.length].fields.name),
+      tap(console.log)
+    );
+    this.currentInfo$ = pictureChange.pipe(
+      map(
+        (time) => this.pictures[time % this.pictures.length].fields.description
+      ),
       tap(console.log)
     );
   }
