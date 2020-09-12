@@ -5,8 +5,8 @@
   <app-navigation></app-navigation>
   <div class="absolute bottom-8 left-8 right-8">
     <div class="max-w-screen-xl mx-auto flex flex-col items-start space-y-4">
-      <p class="text-4xl text-black font-medium bg-white px-2">
-        {{ currentText$ | async }}
+      <p class="text-4xl text-black font-medium">
+        <span class="bg-white">{{ currentText$ | async }}</span>
       </p>
       <markdown
         [data]="currentInfo$ | async"
@@ -119,15 +119,41 @@
     </div>
   </div>
 </div>
-<div class="p-8">
+<div class="p-8 bg-gray-300 relative" style="padding-top: 6vmin;">
+  <div class="custom-shape-divider-top-1599899787">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M649.97 0L550.03 0 599.91 54.12 649.97 0z"
+        class="shape-fill"
+      ></path>
+    </svg>
+  </div>
   <div class="mx-auto max-w-screen-xl">
-    <p class="text-4xl">Calendar</p>
+    <p class="text-4xl mb-8">Upcoming ESN events</p>
     <app-calendar [events]="events"></app-calendar>
   </div>
 </div>
-<div class="bg-gray-800 p-8">
+<div class="bg-gray-800 p-8 relative" style="padding-top: 10vmin;">
+  <div class="custom-shape-divider-top-1599900120">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path
+        d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z"
+        class="shape-fill"
+      ></path>
+    </svg>
+  </div>
   <div class="text-white mx-auto max-w-screen-xl">
-    <div class="flex justify-between">
+    <div class="flex justify-between flex-col lg:flex-row">
       <div>
         <p class="font-medium mb-2">Address</p>
         <p class="mb-2">Erasmus Student Network Deutschland e.V.</p>
