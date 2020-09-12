@@ -3,7 +3,7 @@
   [style.background-image]="currentUrl$ | async"
 >
   <app-navigation></app-navigation>
-  <div class="absolute left-8 right-8" style="bottom: 6vmin;">
+  <div class="absolute left-8 right-8 bottom-8">
     <div class="max-w-screen-xl mx-auto flex flex-col items-start space-y-4">
       <p class="text-4xl text-black font-medium">
         <span class="bg-white">{{ currentText$ | async }}</span>
@@ -14,7 +14,7 @@
       ></markdown>
     </div>
   </div>
-  <div class="custom-shape-divider-bottom-1599900706">
+  <!--<div class="custom-shape-divider-bottom-1599900706">
     <svg
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,9 +23,26 @@
     >
       <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
     </svg>
+  </div>-->
+</div>
+<div class="bg-gray-700 p-8 text-white">
+  <div class="mx-auto max-w-screen-xl">
+    <h1 class="text-4xl font-bold text-blue-500">
+      Spree Break
+    </h1>
+    <p>
+      If you where wondering, this is where I'd advertise the spreebreak during
+      the times leading up to it, but it don't see it cluttering our main
+      navigation
+    </p>
+    <button
+      class="inline-block text-lg px-4 py-2 leading-none border rounded text-white border-blue-500 hover:text-gray-200 hover:bg-blue-800 mt-4"
+    >
+      Learn more
+    </button>
   </div>
 </div>
-<div class="bg-gray-800 px-8 py-0">
+<div class="bg-gray-800 px-8 py-2">
   <div class="flex justify-between text-white mx-auto max-w-screen-xl">
     <div class="text-center">
       <p class="text-4xl">42</p>
@@ -59,12 +76,24 @@
   <div class="text-white mx-auto max-w-screen-xl space-y-4">
     <h1 class="text-4xl">What is ESN?</h1>
     <p>
+      Right now I'm really not sure if this should be the first thing anyone is
+      going to read about us. We should make sure to put the most essential info
+      about esn germany right here since there's a chance people are actually
+      still reading at this point.
+      <br />
       Some very interesting text about what esn is and what we do all day, it's
       vitally important that we have a whole bunch of pictures and/or
       illustrations on this page to make it more interesting to look at. <br />
       This text should also share the screen with at least one illustration,
       maybe in white monochrome colors.
     </p>
+    <div class="flex space-x-2">
+      <button
+        class="inline-block text-lg px-4 py-2 leading-none border rounded text-white border-white hover:text-gray-200 hover:bg-blue-900 mt-4"
+      >
+        Visit esn.org
+      </button>
+    </div>
     <h1 class="text-4xl">About ESN Germany</h1>
     <p>
       The Erasmus Student Network Deutschland e.V. is the consolidation of the
@@ -82,17 +111,12 @@
       <button
         class="inline-block text-lg px-4 py-2 leading-none border rounded text-white border-white hover:text-gray-200 hover:bg-blue-900 mt-4"
       >
-        For Students
+        Find your section
       </button>
       <button
         class="inline-block text-lg px-4 py-2 leading-none border rounded text-white border-white hover:text-gray-200 hover:bg-blue-900 mt-4"
       >
-        For ESNers
-      </button>
-      <button
-        class="inline-block text-lg px-4 py-2 leading-none border rounded text-white border-white hover:text-gray-200 hover:bg-blue-900 mt-4"
-      >
-        For Partners
+        Become a partner
       </button>
     </div>
   </div>
@@ -121,35 +145,57 @@
       ></path>
     </svg>
   </div>
-  <div class="p-8">
-    <div class="mx-auto max-w-screen-xl">
-      <h1 class="text-4xl mb-4">The ESNcard</h1>
-      <img
-        src="/assets/illustrations/card.svg"
-        class="w-full float-left mr-4 mb-4"
-        style="max-width: 16rem;"
-      />
-      <p>
-        Kleine Karte – große Sache: Die ESNcard ist eine Mitgliedskarte für alle
-        ESN Mitglieder und internationale Studenten, mit denen sie sich als Teil
-        des ESN-Netzwerkes ausweisen können. Alle Besitzer der ESNcard erhalten
-        in teilnehmenden Städten besondere Konditionen in Geschäften, Lokalen
-        oder Übernachtungsangebote. Die ESNcard wird von den ESN-Sektionen vor
-        Ort vertrieben, gilt jedoch international. Der Preis der ESNcard und die
-        damit verbundenen Konditionen sind dabei lokal sehr verschiedenen.
-      </p>
-      <div class="flex space-x-2">
-        <button
-          class="inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:text-gray-800 hover:bg-gray-200 mt-4"
-        >
-          Visit esncard.org
-        </button>
-        <button
-          class="inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:text-gray-800 hover:bg-gray-200 mt-4"
-        >
-          Become a partner
-        </button>
-      </div>
+  <div class="mx-auto max-w-screen-xl">
+    <h1 class="text-4xl mb-4">The ESNcard</h1>
+    <img
+      src="/assets/illustrations/card.svg"
+      class="w-full float-left mr-4 mb-4"
+      style="max-width: 16rem;"
+    />
+    <p>
+      Kleine Karte – große Sache: Die ESNcard ist eine Mitgliedskarte für alle
+      ESN Mitglieder und internationale Studenten, mit denen sie sich als Teil
+      des ESN-Netzwerkes ausweisen können. Alle Besitzer der ESNcard erhalten in
+      teilnehmenden Städten besondere Konditionen in Geschäften, Lokalen oder
+      Übernachtungsangebote. Die ESNcard wird von den ESN-Sektionen vor Ort
+      vertrieben, gilt jedoch international. Der Preis der ESNcard und die damit
+      verbundenen Konditionen sind dabei lokal sehr verschiedenen.
+    </p>
+    <div class="flex space-x-2">
+      <button
+        class="inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:text-gray-800 hover:bg-gray-200 mt-4"
+      >
+        Visit esncard.org
+      </button>
+      <button
+        class="inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:text-gray-800 hover:bg-gray-200 mt-4"
+      >
+        Become a partner
+      </button>
+    </div>
+  </div>
+  <div class="mx-auto max-w-screen-xl mt-8">
+    <h1 class="text-4xl mb-4">The people</h1>
+    <img
+      src="/assets/illustrations/community.svg"
+      class="w-full float-right ml-4 mb-4"
+      style="max-width: 16rem;"
+    />
+    <p>
+      Kleine Karte – große Sache: Die ESNcard ist eine Mitgliedskarte für alle
+      ESN Mitglieder und internationale Studenten, mit denen sie sich als Teil
+      des ESN-Netzwerkes ausweisen können. Alle Besitzer der ESNcard erhalten in
+      teilnehmenden Städten besondere Konditionen in Geschäften, Lokalen oder
+      Übernachtungsangebote. Die ESNcard wird von den ESN-Sektionen vor Ort
+      vertrieben, gilt jedoch international. Der Preis der ESNcard und die damit
+      verbundenen Konditionen sind dabei lokal sehr verschiedenen.
+    </p>
+    <div class="flex space-x-2">
+      <button
+        class="inline-block text-lg px-4 py-2 leading-none border rounded text-black border-black hover:text-gray-800 hover:bg-gray-200 mt-4"
+      >
+        Learn about the network
+      </button>
     </div>
   </div>
 </div>
@@ -201,13 +247,19 @@
         <p class="font-medium mb-2">E-Mail</p>
         <p>board@esn-germany.de</p>
       </div>
-      <div>
+      <div class="flex flex-col space-y-2">
         <p class="font-medium">Links</p>
-        <a>Impressum</a>
+        <a href="#">Impressum</a>
+        <a href="#">Data Privacy</a>
+        <a href="#">Code of Conduct</a>
+        <a href="#">Statutes and standing orders</a>
+        <a href="#">SpreeBreak</a>
       </div>
-      <div>
+      <div class="flex flex-col space-y-2">
         <p class="font-medium">External Links</p>
-        <p>ESNcard.org</p>
+        <a href="#">ESNcard.org</a>
+        <a href="#">erasmusIntern.org</a>
+        <a href="#">ESN.org</a>
       </div>
     </div>
   </div>
