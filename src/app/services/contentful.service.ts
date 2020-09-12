@@ -31,6 +31,20 @@ export class ContentfulService {
     );
   }
 
+  public getLandingImages(): Observable<any[]> {
+    return fromPromise(
+      this.cdaClient.getEntries({
+        content_type: environment.contentful.contentTypeIds.landingImage,
+      })
+    ).pipe(
+      map(
+        (res) =>
+          (this.cdaClient.parseEntries(res) as unknown) as EntryCollection<any>
+      ),
+      map((entries) => entries.items)
+    );
+  }
+
   public getPictures(): Observable<any[]> {
     return fromPromise(
       this.cdaClient.getEntries({

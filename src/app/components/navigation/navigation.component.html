@@ -2,7 +2,10 @@
   <nav
     class="flex items-center justify-between flex-wrap bg-white p-4 max-w-screen-xl mx-auto"
   >
-    <div class="flex items-center flex-shrink-0 text-white mr-15 lg:h-20 h-15">
+    <div
+      class="flex items-center flex-shrink-0 text-white mr-15 lg:h-20 h-15"
+      routerLink="/"
+    >
       <img class="h-full" src="/assets/images/DE_colour.png" />
     </div>
     <div class="block lg:hidden">
@@ -24,7 +27,8 @@
     >
       <div class="text-sm lg:flex-grow">
         <a
-          href="#responsive-header"
+          routerLink="/organization"
+          routerLinkActive="active"
           class="block text-4xl mt-4 lg:inline-block lg:mt-0 text-gray-900 hover:text-gray-500 mr-8"
         >
           Organization

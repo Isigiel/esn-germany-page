@@ -4,6 +4,51 @@
   transition: background-image 2s ease-in-out;
   will-change: background-image;
 }
+
+.image-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  .image {
+    width: auto;
+    figure {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      img {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        box-shadow: inset 0 0 1px white;
+        //filter: saturate(0.6);
+      }
+      span {
+        bottom: 10px;
+        left: 10px;
+        position: absolute;
+        max-width: calc(100% - 20px);
+        background: white;
+        padding: 0 8px;
+      }
+    }
+    &.layout-2x1 {
+      grid-column-end: span 2;
+    }
+    &.layout-1x2 {
+      grid-row-end: span 2;
+    }
+    &.layout-2x2 {
+      grid-column-end: span 2;
+      grid-row-end: span 2;
+    }
+  }
+}
+
 .custom-shape-divider-bottom-1599900706 {
   position: absolute;
   bottom: -1px;

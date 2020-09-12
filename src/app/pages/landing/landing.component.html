@@ -146,6 +146,20 @@
     </svg>
   </div>
   <div class="mx-auto max-w-screen-xl">
+    <h1 class="text-4xl mb-4">ESN in pictures</h1>
+  </div>
+  <div class="image-grid">
+    <div *ngFor="let image of imageGrid" class="image layout-{{ image.size }}">
+      <figure class="aspect-ratio-{{ image.ratio }}">
+        <img
+          src="{{ image.image.fields.file.url }}{{ image.query }}"
+          alt="{{ image.name }}"
+        />
+        <span>{{ image.name }}</span>
+      </figure>
+    </div>
+  </div>
+  <!--<div class="mx-auto max-w-screen-xl">
     <h1 class="text-4xl mb-4">The ESNcard</h1>
     <img
       src="/assets/illustrations/card.svg"
@@ -197,7 +211,7 @@
         Learn about the network
       </button>
     </div>
-  </div>
+  </div>-->
 </div>
 <div class="p-8 bg-gray-300 relative" style="padding-top: 6vmin;">
   <div class="custom-shape-divider-top-1599899787">

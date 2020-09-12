@@ -1,0 +1,25 @@
+.header-image {
+  height: 40vh;
+  width: 100%;
+  background-image: url("/assets/images/organization.jpg");
+}
+.custom-shape-divider-bottom-1599900706 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1599900706 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 5vmin;
+}
+
+.custom-shape-divider-bottom-1599900706 .shape-fill {
+  fill: #1e429f;
+}

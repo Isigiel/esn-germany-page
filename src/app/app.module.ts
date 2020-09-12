@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScullyLibModule } from '@scullyio/ng-lib';
-import { LandingComponent } from './pages';
+import { LandingComponent, OrganizationComponent } from './pages';
 import { CalendarComponent, NavigationComponent } from './components';
 import { HttpClientModule } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
@@ -15,6 +15,7 @@ import { MarkdownModule } from 'ngx-markdown';
     LandingComponent,
     NavigationComponent,
     CalendarComponent,
+    OrganizationComponent,
   ],
   imports: [
     BrowserModule,

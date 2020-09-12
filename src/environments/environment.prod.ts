@@ -6,6 +6,7 @@ export const environment = {
     contentTypeIds: {
       event: 'events',
       headerPicture: 'headerPicture',
+      landingImage: 'landingImage',
     },
   },
 };
