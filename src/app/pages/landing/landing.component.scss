@@ -4,3 +4,41 @@
   transition: background-image 2s ease-in-out;
   will-change: background-image;
 }
+.custom-shape-divider-top-1599893070 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.custom-shape-divider-top-1599893070 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 10vmin;
+}
+
+.custom-shape-divider-top-1599893070 .shape-fill {
+  fill: #252f3f;
+}
+
+.custom-shape-divider-top-1599893662 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1599893662 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 10vmin;
+}
+
+.custom-shape-divider-top-1599893662 .shape-fill {
+  fill: #1e429f;
+}
