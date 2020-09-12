@@ -3,7 +3,7 @@
   [style.background-image]="currentUrl$ | async"
 >
   <app-navigation></app-navigation>
-  <div class="absolute bottom-8 left-8 right-8">
+  <div class="absolute left-8 right-8" style="bottom: 6vmin;">
     <div class="max-w-screen-xl mx-auto flex flex-col items-start space-y-4">
       <p class="text-4xl text-black font-medium">
         <span class="bg-white">{{ currentText$ | async }}</span>
@@ -14,8 +14,18 @@
       ></markdown>
     </div>
   </div>
+  <div class="custom-shape-divider-bottom-1599900706">
+    <svg
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1200 120"
+      preserveAspectRatio="none"
+    >
+      <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
+    </svg>
+  </div>
 </div>
-<div class="bg-gray-800 p-8 pb-0">
+<div class="bg-gray-800 px-8 py-0">
   <div class="flex justify-between text-white mx-auto max-w-screen-xl">
     <div class="text-center">
       <p class="text-4xl">42</p>
@@ -35,7 +45,7 @@
     </div>
   </div>
 </div>
-<div class="bg-blue-800 relative p-8" style="padding-top: 12vmin;">
+<div class="bg-blue-800 relative p-8" style="padding-top: 6vmin;">
   <div class="custom-shape-divider-top-1599893070">
     <svg
       data-name="Layer 1"
@@ -138,7 +148,7 @@
     <app-calendar [events]="events"></app-calendar>
   </div>
 </div>
-<div class="bg-gray-800 p-8 relative" style="padding-top: 10vmin;">
+<div class="bg-gray-800 p-8 relative" style="padding-top: 6vmin;">
   <div class="custom-shape-divider-top-1599900120">
     <svg
       data-name="Layer 1"
