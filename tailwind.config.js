@@ -2,6 +2,10 @@ module.exports = {
   // purge: ["./src/**/*.html", "./src/**/*.ts"],
   theme: {
     extend: {},
+    fontFamily: {
+      display: ["Oswald", "sans-serif"],
+      body: ["Lato", "sans-serif"],
+    },
     aspectRatio: {
       "3by2": [3, 2],
       "3by4": [3, 4],

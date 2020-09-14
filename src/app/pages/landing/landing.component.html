@@ -5,27 +5,17 @@
   <app-navigation></app-navigation>
   <div class="absolute left-8 right-8 bottom-8">
     <div class="max-w-screen-xl mx-auto flex flex-col items-start space-y-4">
-      <p class="text-4xl text-black font-medium">
-        <span class="bg-white">{{ currentText$ | async }}</span>
-      </p>
+      <h2 class="text-xl lg:text-4xl text-black font-medium">
+        <span class="bg-white px-2">{{ currentText$ | async }}</span>
+      </h2>
       <markdown
         [data]="currentInfo$ | async"
         class="prose text-black bg-white px-2"
       ></markdown>
     </div>
   </div>
-  <!--<div class="custom-shape-divider-bottom-1599900706">
-    <svg
-      data-name="Layer 1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1200 120"
-      preserveAspectRatio="none"
-    >
-      <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
-    </svg>
-  </div>-->
 </div>
-<div class="bg-gray-700 p-8 text-white">
+<!--<div class="bg-gray-700 p-8 text-white">
   <div class="mx-auto max-w-screen-xl">
     <h1 class="text-4xl font-bold text-blue-500">
       Spree Break
@@ -41,28 +31,28 @@
       Learn more
     </button>
   </div>
-</div>
+</div>-->
 <div class="bg-gray-800 px-8 py-2">
   <div class="flex justify-between text-white mx-auto max-w-screen-xl">
     <div class="text-center">
-      <p class="text-4xl">42</p>
+      <h2 class="text-4xl">42</h2>
       <p class="text-lg">Countries</p>
     </div>
     <div class="text-center">
-      <p class="text-4xl">39</p>
+      <h2 class="text-4xl">39</h2>
       <p class="text-lg">German sections</p>
     </div>
-    <div class="text-center">
-      <p class="text-4xl">15 000</p>
+    <div class="text-center hidden lg:block">
+      <h2 class="text-4xl">15 000</h2>
       <p class="text-lg">European volunteers</p>
     </div>
     <div class="text-center">
-      <p class="text-4xl">10 600</p>
+      <h2 class="text-4xl">10 600</h2>
       <p class="text-lg">Exchange students</p>
     </div>
   </div>
 </div>
-<div class="bg-blue-800 relative p-8" style="padding-top: 6vmin;">
+<div class="bg-blue-800 relative p-8" style="padding-top: calc(5vmin + 2rem);">
   <div class="custom-shape-divider-top-1599893070">
     <svg
       data-name="Layer 1"
@@ -73,8 +63,8 @@
       <path d="M1200 0L0 0 892.25 114.72 1200 0z" class="shape-fill"></path>
     </svg>
   </div>
-  <div class="text-white mx-auto max-w-screen-xl space-y-4">
-    <h1 class="text-4xl">What is ESN?</h1>
+  <div class="text-white mx-auto max-w-screen-xl space-y-4 text-center">
+    <h1 class="text-3xl lg:text-5xl">International student life. Better</h1>
     <p>
       Right now I'm really not sure if this should be the first thing anyone is
       going to read about us. We should make sure to put the most essential info
@@ -148,15 +138,17 @@
   <div class="mx-auto max-w-screen-xl">
     <h1 class="text-4xl mb-4">ESN in pictures</h1>
   </div>
-  <div class="image-grid">
-    <div *ngFor="let image of imageGrid" class="image layout-{{ image.size }}">
-      <figure class="aspect-ratio-{{ image.ratio }}">
-        <img
-          src="{{ image.image.fields.file.url }}{{ image.query }}"
-          alt="{{ image.name }}"
-        />
-        <span>{{ image.name }}</span>
-      </figure>
+  <div class="w-full grid grid-cols-1 lg:grid-cols-3 grid-flow-row-dense gap-8">
+    <div
+      *ngFor="let image of imageGrid"
+      class="image layout-{{ image.size }} relative"
+    >
+      <div class="aspect-ratio-{{ image.ratio }}"></div>
+      <img
+        src="{{ image.image.fields.file.url }}{{ image.query }}"
+        class="absolute left-0 top-0 w-full h-full object-cover"
+      />
+      <span>{{ image.name }}</span>
     </div>
   </div>
   <!--<div class="mx-auto max-w-screen-xl">
