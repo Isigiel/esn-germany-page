@@ -17,6 +17,9 @@
   }
   &.layout-2x1 {
     grid-column-end: span 2;
+    @media screen and (max-width: 768px) {
+      grid-column-end: span 1;
+    }
   }
   &.layout-1x2 {
     grid-row-end: span 2;
@@ -24,6 +27,10 @@
   &.layout-2x2 {
     grid-column-end: span 2;
     grid-row-end: span 2;
+    @media screen and (max-width: 768px) {
+      grid-column-end: span 1;
+      grid-row-end: span 1;
+    }
   }
 }
 
